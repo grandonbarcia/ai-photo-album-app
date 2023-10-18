@@ -29,6 +29,7 @@ export default async function GalleryPage() {
                 alt="an image of something"
                 width="400"
                 height="300"
+                publicId={result.public_id}
               />
             );
           })}
