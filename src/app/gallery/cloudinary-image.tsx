@@ -7,7 +7,9 @@ import { setAsFavoriteAction } from './actions';
 import { useTransition } from 'react';
 import { SearchResult } from './page';
 
-export function CloudinaryImage(props: any & { imageData: SearchResult }) {
+export function CloudinaryImage(
+  props: any & { imageData: SearchResult; path: string }
+) {
   const [transition, startTransition] = useTransition();
 
   const isFavorited = props.imageData.tags.includes('favorite');
@@ -19,7 +21,7 @@ export function CloudinaryImage(props: any & { imageData: SearchResult }) {
         <FullHeart
           onClick={() => {
             startTransition(() => {
-              setAsFavoriteAction(props.imageData.public_id, false);
+              setAsFavoriteAction(props.imageData.public_id, false, props.path);
             });
           }}
           className="absolute top-2 right-2 hover:text-red-500 cursor-pointer"
@@ -28,7 +30,7 @@ export function CloudinaryImage(props: any & { imageData: SearchResult }) {
         <Heart
           onClick={() => {
             startTransition(() => {
-              setAsFavoriteAction(props.imageData.public_id, true);
+              setAsFavoriteAction(props.imageData.public_id, true, props.path);
             });
           }}
           className="absolute top-2 right-2 hover:text-red-500 cursor-pointer"
