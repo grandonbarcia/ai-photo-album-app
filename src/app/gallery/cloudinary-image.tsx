@@ -17,7 +17,7 @@ export function CloudinaryImage(props: any & { publicId: string }) {
             setAsFavoriteAction(props.publicId);
           });
         }}
-        className="absolute top-2 right-2"
+        className="absolute top-2 right-2 hover:text-red-500 cursor-pointer"
       />
     </div>
   );
