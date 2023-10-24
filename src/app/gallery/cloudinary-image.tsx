@@ -24,7 +24,7 @@ export function CloudinaryImage(
               setAsFavoriteAction(props.imageData.public_id, false, props.path);
             });
           }}
-          className="absolute top-2 right-2 hover:text-red-500 cursor-pointer"
+          className="absolute top-2 right-2 text-red-500 cursor-pointer"
         />
       ) : (
         <Heart
