@@ -19,7 +19,7 @@ function SideMenu() {
           <div className="space-y-1">
             <Button
               asChild
-              variant="secondary"
+              variant="ghost"
               className="w-full justify-start flex gap-2"
             >
               <Link href="/gallery">
