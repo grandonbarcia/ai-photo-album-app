@@ -13,7 +13,6 @@ export default function UploadButton() {
           // setImageId(results.info.public_id);
 
           setTimeout(() => {
-            console.log('refresh');
             router.refresh();
           }, 2000);
         }}
