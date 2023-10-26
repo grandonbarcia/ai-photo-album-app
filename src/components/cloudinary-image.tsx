@@ -6,6 +6,7 @@ import cloudinary from 'cloudinary';
 import { setAsFavoriteAction } from '../app/gallery/actions';
 import { useState, useTransition } from 'react';
 import { SearchResult } from '../app/gallery/page';
+import { ImageMenu } from './ui/image-menu';
 
 export function CloudinaryImage(
   props: {
@@ -34,7 +35,7 @@ export function CloudinaryImage(
               setAsFavoriteAction(imageData.public_id, false);
             });
           }}
-          className="absolute top-2 right-2 text-red-500 cursor-pointer"
+          className="absolute top-2 left-2 text-red-500 cursor-pointer"
         />
       ) : (
         <Heart
@@ -47,6 +48,7 @@ export function CloudinaryImage(
           className="absolute top-2 right-2 hover:text-red-500 cursor-pointer"
         />
       )}
+      <ImageMenu />
     </div>
   );
 }
