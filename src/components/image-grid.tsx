@@ -1,5 +1,5 @@
 'use client';
-import { CloudinaryImage } from '@/app/gallery/cloudinary-image';
+import { CloudinaryImage } from '@/components/cloudinary-image';
 import { SearchResult } from '@/app/gallery/page';
 import React, { ReactNode } from 'react';
 

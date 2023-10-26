@@ -1,5 +1,5 @@
 'use client';
-import { CloudinaryImage } from './cloudinary-image';
+import { CloudinaryImage } from '../../components/cloudinary-image';
 import { ImageGrid } from '@/components/image-grid';
 import { SearchResult } from './page';
 
