@@ -10,8 +10,10 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Menu } from '../icons/menu';
+import { AddToAlbumDialog } from './add-to-album-dialog';
+import { SearchResult } from '@/app/gallery/page';
 
-export function ImageMenu() {
+export function ImageMenu({ image }: { image: SearchResult }) {
   return (
     <div className="absolute top-2 right-2">
       <DropdownMenu>
@@ -20,11 +22,10 @@ export function ImageMenu() {
             <Menu />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-32">
+        <DropdownMenuContent className="w-42">
           <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <FolderPlus className="mr-2 h-4 w-4" />
-              <span>Add to Album</span>
+            <DropdownMenuItem asChild>
+              <AddToAlbumDialog image={image} />
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
